@@ -9,10 +9,14 @@ class preloadScene extends Phaser.Scene {
     preload ()
     
     {
+        this.load.audio("game_ost", "assets/game_ost.mp3");
 
     }
 
     create () {
+
+        this.music = this.sound.add("game_ost",{loop: true}).setVolume(0.7);
+    this.music.play();
     
         console.log("preloadScene")
         this.add.text(10,500, 'Animation labs, press spacebar to continue', 

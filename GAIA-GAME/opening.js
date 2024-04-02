@@ -4,15 +4,11 @@ class opening extends Phaser.Scene {
   }
 
   preload() {
-    this.load.image("openingscene", "assets/OPENINGSCENE.jpg");
-    this.load.audio("game_ost", "assets/game_ost.mp3");
-    
+    this.load.image("openingscene", "assets/OPENINGSCENE.jpg");    
   }
 
   create() {
-    this.music = this.sound.add("game_ost",{loop: true}).setVolume(0.2);
-    this.music.play();
-
+    
     this.openingscene = this.add.image(0, 0, "openingscene").setOrigin(0,0)
     
     console.log("menu page - opening");
